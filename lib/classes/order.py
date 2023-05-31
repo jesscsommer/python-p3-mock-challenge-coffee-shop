@@ -28,7 +28,6 @@ class Order:
     
     @customer.setter 
     def customer(self, customer):
-        from classes.customer import Customer 
         if isinstance(customer, Customer):
             self._customer = customer
         else: 
@@ -40,8 +39,10 @@ class Order:
     
     @coffee.setter 
     def coffee(self, coffee):
-        from classes.coffee import Coffee
         if isinstance(coffee, Coffee):
             self._coffee = coffee
         else: 
             raise Exception("Coffee must be an instance of Coffee")
+        
+from classes.customer import Customer 
+from classes.coffee import Coffee

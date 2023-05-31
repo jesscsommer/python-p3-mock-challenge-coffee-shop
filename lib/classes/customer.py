@@ -1,5 +1,3 @@
-from classes.order import Order
-
 class Customer: 
 
     def __init__(self, name):
@@ -30,3 +28,5 @@ class Customer:
             self._name = name
         else: 
             raise Exception("Customer name must be a string between 2-15 chars")
+        
+from classes.order import Order

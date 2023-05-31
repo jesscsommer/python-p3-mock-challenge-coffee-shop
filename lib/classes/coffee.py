@@ -1,5 +1,3 @@
-from classes.order import Order
-
 class Coffee: 
 
     def __init__(self, name):
@@ -34,3 +32,5 @@ class Coffee:
             raise Exception("Coffee name must be a string between 1-15 chs")
         else: 
             raise Exception("Coffee name cannot be changed")
+        
+from classes.order import Order
