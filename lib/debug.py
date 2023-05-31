@@ -9,13 +9,16 @@ if __name__ == '__main__':
     print("HELLO! :) let's debug")
 
     cf1 = Coffee("Tony's")
+    cf2 = Coffee("Cafe Vita")
+    cf3 = Coffee("Raven's Brew")
+
     cs1 = Customer("Herm")
-    # o1 = Order(cf1, cs1, 9.50)
+    cs2 = Customer("Ron")
+    cs3 = Customer("Jess")
 
-    # coffee = Coffee("Vanilla Latte")
-    # customer = Customer('Steve')
-    # order_1 = Order(customer, coffee, 2)
-    # order_2 = Order(customer, coffee, 5)
-
+    o1 = Order(cs1, cf1, 9.50)
+    o2 = Order(cs3, cf1, 4.50)
+    o3 = Order(cs2, cf2, 5.50)
+    o4 = Order(cs1, cf1, 9.50)
 
     ipdb.set_trace()
