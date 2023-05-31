@@ -24,7 +24,7 @@ class Coffee:
     
     @name.setter
     def name(self, name):
-        if (not hasattr(self, "name") 
+        if (not hasattr(self, "_name") 
             and type(name) == str 
             and (1 <= len(name.replace(" ", "")) <= 15)):
             self._name = name
