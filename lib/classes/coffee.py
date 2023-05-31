@@ -9,7 +9,7 @@ class Coffee:
         return [order for order in Order.all if order.coffee == self]
     
     def customers(self):
-        return {order.customer for order in self.orders()}
+        return list({order.customer for order in self.orders()})
     
     def num_orders(self):
         return len(self.orders())
@@ -28,7 +28,7 @@ class Coffee:
     def name(self, name):
         if (not hasattr(self, "name") 
             and type(name) == str 
-            and (1 <= len(name) <= 15)):
+            and (1 <= len(name.replace(" ", "")) <= 15)):
             self._name = name
         elif (not hasattr(self, "name")): 
             raise Exception("Coffee name must be a string between 1-15 chs")
