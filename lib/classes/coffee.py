@@ -10,6 +10,14 @@ class Coffee:
     
     def customers(self):
         return {order.customer for order in self.orders()}
+    
+    def num_orders(self):
+        return len(self.orders())
+    
+    def average_price(self):
+        all_prices = [order.price for order in self.orders()]
+        if all_prices:
+            return round((sum(all_prices) / len(all_prices)), 2)
 
     # Properties 
     @property 

@@ -10,6 +10,14 @@ class Customer:
     
     def coffees(self):
         return {order.coffee for order in self.orders()}
+    
+    def create_order(self, coffee, price):
+        from classes.coffee import Coffee 
+        if (isinstance(coffee, Coffee)
+            and type(price) == int): 
+            Order(self, coffee, price)
+        else: 
+            raise Exception("Could not create order")
 
     # Properties 
     @property
