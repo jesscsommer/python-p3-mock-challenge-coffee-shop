@@ -27,6 +27,6 @@ class Customer:
         if type(name) == str and (1 <= len(name) <= 15):
             self._name = name
         else: 
-            raise Exception("Customer name must be a string between 2-15 chars")
+            raise Exception("Customer name must be a string between 1-15 chars")
         
 from classes.order import Order
